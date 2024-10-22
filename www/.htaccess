@@ -1,0 +1,12 @@
+RewriteEngine on
+
+#Now, rewrite to HTTPS:
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule !\.(?:jpe?g|gif|bmp|png|tiff|css|js)$ index.php [L,NC] # direct to index.php except these
+#RewriteRule ^(.*)$ index.php?request=$1 [L,QSA]

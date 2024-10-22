@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /data/agree/
+Sitemap: https://event.hotblood.co.kr/sitemap.xml
+
+#DaumWebMasterTool:caca05824d6ed0e8936f6215024faf5aef207bf090ba95c7931c02ddfb7efe8c:BRomOFi8ozxLFAgqOq596g==
